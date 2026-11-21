@@ -1,3 +1,6 @@
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']); // Fix Windows ISP DNS SRV resolution for MongoDB Atlas
+
 const mongoose = require('mongoose');
 
 let cachedConnection = global.mongooseConnection;
