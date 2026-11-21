@@ -94,7 +94,7 @@ export default function B2BRfqForm({ prefilledData }) {
         <div style={{ background: '#FAF7F2', border: '1.5px solid var(--gold-primary)', borderRadius: '10px', padding: '1.8rem', textAlign: 'center' }}>
           <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📄</div>
           <h4 style={{ color: 'var(--gold-bright)', fontSize: '1.2rem', marginBottom: '0.5rem' }}>
-            Container RFQ Successfully Logged in MongoDB!
+            Container RFQ Successfully Received!
           </h4>
           <p style={{ color: 'var(--text-primary)', fontSize: '0.9rem', marginBottom: '1rem' }}>
             Reference Code: <strong style={{ fontFamily: 'monospace', color: 'var(--gold-primary)' }}>{submittedRfq.inquiryCode}</strong>
@@ -219,7 +219,7 @@ export default function B2BRfqForm({ prefilledData }) {
             style={{ width: '100%' }}
             disabled={loading}
           >
-            {loading ? 'Submitting to MongoDB...' : '📄 Transmit Export Inquiry (MongoDB)'}
+            {loading ? 'Submitting Inquiry...' : '📄 Transmit Export Inquiry'}
           </button>
         </form>
       )}

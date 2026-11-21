@@ -208,7 +208,7 @@ export default function CheckoutModal() {
             style={{ width: '100%', padding: '0.9rem' }}
             disabled={loading}
           >
-            {loading ? 'Confirming with MongoDB...' : `👑 Place Order (PKR ${totalAmount.toLocaleString()})`}
+            {loading ? 'Confirming Order...' : `👑 Place Order (PKR ${totalAmount.toLocaleString()})`}
           </button>
         </form>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Footer() {
+export default function Footer({ onOpenAdmin }) {
   return (
     <footer className="site-footer" id="contact">
       <div className="container">
@@ -33,6 +33,15 @@ export default function Footer() {
               <li><a href="#varieties">Flagship Varieties</a></li>
               <li><a href="#packaging">Packaging Lineup</a></li>
               <li><a href="#about">Our Punjab Heritage</a></li>
+              <li>
+                <a 
+                  href="#orders" 
+                  onClick={(e) => { e.preventDefault(); if (onOpenAdmin) onOpenAdmin(); }}
+                  style={{ color: 'var(--gold-bright)', fontWeight: '700' }}
+                >
+                  📋 Orders Portal (Admin)
+                </a>
+              </li>
             </ul>
           </div>
 

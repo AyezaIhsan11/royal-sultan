@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 
-export default function Navbar() {
+export default function Navbar({ onOpenAdmin }) {
   const { itemCount, openCart } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -45,6 +45,16 @@ export default function Navbar() {
 
           {/* Action Utilities */}
           <div className="nav-actions">
+            {/* Orders Portal Button */}
+            <button 
+              className="btn btn-sm btn-outline-gold" 
+              onClick={onOpenAdmin}
+              title="Admin Orders Portal"
+              style={{ fontSize: '0.8rem', padding: '0.45rem 0.8rem' }}
+            >
+              📋 Orders Portal
+            </button>
+
             <a 
               href="https://wa.me/923001234567" 
               target="_blank" 

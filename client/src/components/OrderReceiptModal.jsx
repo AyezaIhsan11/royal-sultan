@@ -14,7 +14,7 @@ export default function OrderReceiptModal() {
           Order Confirmed!
         </h3>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.2rem' }}>
-          Thank you for choosing Royal Sultan Basmati Rice. Your order has been saved in MongoDB and queued for warehouse dispatch.
+          Thank you for choosing Royal Sultan Basmati Rice. Your order has been confirmed and queued for premium dispatch.
         </p>
 
         <div className="receipt-order-code">

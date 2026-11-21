@@ -12,6 +12,7 @@ import B2BRfqForm from './components/B2BRfqForm';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
 import OrderReceiptModal from './components/OrderReceiptModal';
+import AdminOrdersModal from './components/AdminOrdersModal';
 import Footer from './components/Footer';
 
 // Fallback initial products if API is momentarily loading
@@ -105,6 +106,7 @@ export default function App() {
   const [products, setProducts] = useState(FALLBACK_PRODUCTS);
   const [activeVarietyCode, setActiveVarietyCode] = useState('RS-1121-KNT');
   const [prefilledRfq, setPrefilledRfq] = useState(null);
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   useEffect(() => {
     // Fetch live product catalog from MongoDB API
@@ -123,7 +125,7 @@ export default function App() {
   return (
     <CartProvider>
       <div className="royal-app">
-        <Navbar />
+        <Navbar onOpenAdmin={() => setIsAdminOpen(true)} />
         
         <main>
           <Hero />
@@ -164,12 +166,13 @@ export default function App() {
           </section>
         </main>
 
-        <Footer />
+        <Footer onOpenAdmin={() => setIsAdminOpen(true)} />
 
         {/* Dynamic Drawers & Modals */}
         <CartDrawer />
         <CheckoutModal />
         <OrderReceiptModal />
+        <AdminOrdersModal isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
       </div>
     </CartProvider>
   );
