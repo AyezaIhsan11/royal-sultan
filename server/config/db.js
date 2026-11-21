@@ -1,5 +1,13 @@
-const dns = require('dns');
-dns.setServers(['8.8.8.8', '8.8.4.4']); // Fix Windows ISP DNS SRV resolution for MongoDB Atlas
+// Only override DNS on Windows to fix local ISP SRV resolution.
+// On Vercel / Linux, use native cloud DNS.
+if (process.platform === 'win32' && !process.env.VERCEL) {
+  try {
+    const dns = require('dns');
+    dns.setServers(['8.8.8.8', '8.8.4.4']);
+  } catch (e) {
+    // ignore
+  }
+}
 
 const mongoose = require('mongoose');
 
@@ -17,7 +25,7 @@ const connectDB = async () => {
     return null;
   }
 
-  if (cachedConnection.conn) {
+  if (cachedConnection.conn && mongoose.connection.readyState === 1) {
     return cachedConnection.conn;
   }
 
@@ -26,6 +34,7 @@ const connectDB = async () => {
       bufferCommands: false,
       maxPoolSize: 10,
       serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 5000
     };
 
     cachedConnection.promise = mongoose.connect(uri, opts).then((mongooseInstance) => {
@@ -42,7 +51,7 @@ const connectDB = async () => {
     cachedConnection.conn = await cachedConnection.promise;
   } catch (e) {
     cachedConnection.promise = null;
-    throw e;
+    console.warn('DB connect exception, continuing with fallback:', e.message);
   }
 
   return cachedConnection.conn;

@@ -11,11 +11,6 @@ const rfqRoutes = require('./routes/rfqRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB
-connectDB().catch(err => {
-  console.warn('Initial DB connection warning (running fallback):', err.message);
-});
-
 // Middlewares
 app.use(cors({
   origin: '*',
@@ -25,16 +20,26 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Ensure DB is connected for requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (e) {
+    console.warn('DB connect error in middleware:', e.message);
+  }
+  next();
+});
+
 // Serve static public assets (images, etc)
 app.use('/assets', express.static(path.join(__dirname, '../client/public/assets')));
 
-// API Routes
-app.use('/api/products', productRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/rfq', rfqRoutes);
+// API Routes (support both with and without /api prefix for Vercel serverless rewrites)
+app.use(['/api/products', '/products'], productRoutes);
+app.use(['/api/orders', '/orders'], orderRoutes);
+app.use(['/api/rfq', '/rfq'], rfqRoutes);
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/health'], (req, res) => {
   res.json({
     status: 'online',
     app: 'Royal Sultan Premium Rice MERN API',
