@@ -7,7 +7,7 @@ export default function PackagingShowcase() {
       type: 'Royal Black Pouch', 
       color: '#1A1815', 
       target: 'Retail & Gifting', 
-      desc: 'Sleek matte black finish with royal gold crown and moisture barrier.',
+      desc: 'Sleek matte black finish with royal gold crown, gold trim, and moisture barrier.',
       image: '/assets/images/packaging/bag_1kg.jpg'
     },
     { 
@@ -33,6 +33,14 @@ export default function PackagingShowcase() {
       target: 'Banquet & Feasts', 
       desc: 'Master royal maroon bag with gold handle for celebratory feasts.',
       image: '/assets/images/packaging/bag_25kg.jpg'
+    },
+    { 
+      weight: '40 KG', 
+      type: 'Export Skin Jute Sack', 
+      color: '#B49B76', 
+      target: 'Global Shipping / FCL', 
+      desc: 'Natural skin-color jute burlap sack with breathable moisture barrier for bulk export.',
+      image: '/assets/images/packaging/bag_40kg.jpg'
     }
   ];
 
@@ -43,19 +51,20 @@ export default function PackagingShowcase() {
           <div className="sub-slogan">Official Royal Sultan Collection</div>
           <h2>Bespoke Packaging <span className="gold-text">Excellence</span></h2>
           <p>
-            "Khushbu Jo Royal Ho" — Our signature 4-size luxury collection, crafted with moisture-lock barrier layers, ergonomic gold handles, and royal color-coded finishes.
+            "Khushbu Jo Royal Ho" — Our complete 1 KG to 40 KG packaging lineup, with distinct colors for each size tier, moisture-lock protection, and export-grade natural skin jute sacks.
           </p>
         </div>
 
-        <div className="packaging-lineup-banner" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 36px rgba(0,0,0,0.08)', marginBottom: '2.5rem' }}>
+        {/* Panoramic Horizontal Banner showing all bags in a line */}
+        <div className="packaging-lineup-banner" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 36px rgba(0,0,0,0.08)', marginBottom: '2.5rem', background: '#FAF7F2' }}>
           <img 
-            src="/assets/images/instagram/post_7_Deol1ltkSV8.jpg" 
-            alt="Royal Sultan Collection 1KG, 5KG, 10KG, 25KG Packaging" 
-            style={{ width: '100%', maxHeight: '540px', objectFit: 'cover' }}
+            src="/assets/images/packaging/packaging_lineup_horizontal.jpg" 
+            alt="Royal Sultan Complete Lineup - 1KG, 5KG, 10KG, 25KG, 40KG" 
+            style={{ width: '100%', height: 'auto', display: 'block' }}
           />
         </div>
 
-        <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.5rem' }}>
+        <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.2rem' }}>
           {PACK_SIZES.map(item => (
             <div 
               key={item.weight} 

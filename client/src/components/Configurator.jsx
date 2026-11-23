@@ -5,7 +5,8 @@ const BAG_IMAGES_BY_WEIGHT = {
   1: '/assets/images/packaging/bag_1kg.jpg',
   5: '/assets/images/packaging/bag_5kg.jpg',
   10: '/assets/images/packaging/bag_10kg.jpg',
-  25: '/assets/images/packaging/bag_25kg.jpg'
+  25: '/assets/images/packaging/bag_25kg.jpg',
+  40: '/assets/images/packaging/bag_40kg.jpg'
 };
 
 export default function Configurator({ products, activeProductCode, setActiveProductCode }) {

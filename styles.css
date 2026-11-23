@@ -59,7 +59,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 14.5px;
   background-color: var(--bg-dark);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -129,7 +129,7 @@ h1, h2, h3, h4, .brand-font {
 }
 
 .section-padding {
-  padding: 6rem 0;
+  padding: 3.8rem 0;
 }
 
 .text-center { text-align: center; }
@@ -220,10 +220,11 @@ h1, h2, h3, h4, .brand-font {
 .top-notice-bar {
   background: linear-gradient(90deg, #F5ECE0 0%, #EDE1CD 50%, #F5ECE0 100%);
   border-bottom: 1px solid rgba(184, 142, 40, 0.25);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   color: #4A3A10;
-  padding: 0.45rem 1rem;
+  padding: 0.35rem 1rem;
   text-align: center;
+  letter-spacing: 0.04em;
 }
 
 .top-notice-bar .highlight {
@@ -399,7 +400,7 @@ h1, h2, h3, h4, .brand-font {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.28;
+  opacity: 0.58;
   filter: saturate(1.2) contrast(1.15);
   z-index: 0;
   pointer-events: none;
@@ -411,7 +412,7 @@ h1, h2, h3, h4, .brand-font {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(251, 248, 242, 0.92) 0%, rgba(245, 239, 230, 0.80) 40%, rgba(251, 248, 242, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(251, 248, 242, 0.72) 0%, rgba(245, 239, 230, 0.62) 40%, rgba(251, 248, 242, 0.85) 100%);
   z-index: 1;
 }
 
@@ -893,7 +894,7 @@ h1, h2, h3, h4, .brand-font {
 
 .variety-card-header {
   position: relative;
-  height: 200px;
+  height: 165px;
   overflow: hidden;
 }
 

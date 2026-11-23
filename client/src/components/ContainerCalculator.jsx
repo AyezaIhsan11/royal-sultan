@@ -67,9 +67,9 @@ export default function ContainerCalculator({ onQuoteRequest }) {
           value={bagWeightKg} 
           onChange={(e) => setBagWeightKg(Number(e.target.value))}
         >
-          <option value={10}>10 KG Bags (Master Poly / Non-Woven)</option>
-          <option value={20}>20 KG Bags (PP Woven Sack)</option>
-          <option value={40}>40 KG Commercial Jute Sacks (Standard Export)</option>
+          <option value={10}>10 KG Royal Navy Blue Bags</option>
+          <option value={25}>25 KG Royal Maroon Pouches</option>
+          <option value={40}>40 KG Export Skin Jute Sacks</option>
           <option value={50}>50 KG Bulk Jute Sacks</option>
         </select>
       </div>
