@@ -30,7 +30,7 @@ export default function Navbar({ onOpenAdmin }) {
             </div>
           </a>
 
-          {/* Desktop Navigation Menu */}
+          {/* Desktop & Mobile Navigation Menu */}
           <nav>
             <ul className={`nav-links ${mobileMenuOpen ? 'open' : ''}`} id="primary-nav-links">
               <li><a href="#home" className="nav-link active" onClick={closeMobileMenu}>Home</a></li>
@@ -40,14 +40,46 @@ export default function Navbar({ onOpenAdmin }) {
               <li><a href="#about" className="nav-link" onClick={closeMobileMenu}>Our Heritage</a></li>
               <li><a href="#export-rfq" className="nav-link" onClick={closeMobileMenu}>B2B / Export</a></li>
               <li><a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a></li>
+              {/* Mobile Drawer Dedicated Links */}
+              <li className="mobile-only-link">
+                <a 
+                  href="#orders" 
+                  onClick={(e) => { e.preventDefault(); closeMobileMenu(); onOpenAdmin(); }}
+                  style={{ color: 'var(--gold-bright)', fontWeight: '700' }}
+                >
+                  📋 Orders Portal (Admin)
+                </a>
+              </li>
+              <li className="mobile-only-link">
+                <a 
+                  href="https://www.instagram.com/royalsultan_rs" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={closeMobileMenu}
+                  style={{ color: 'var(--gold-primary)', fontWeight: '600' }}
+                >
+                  📸 Instagram: @royalsultan_rs
+                </a>
+              </li>
+              <li className="mobile-only-link">
+                <a 
+                  href="https://wa.me/923091065712" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={closeMobileMenu}
+                  style={{ color: '#059669', fontWeight: '700' }}
+                >
+                  💬 WhatsApp: 0309 1065712
+                </a>
+              </li>
             </ul>
           </nav>
 
           {/* Action Utilities */}
           <div className="nav-actions">
-            {/* Orders Portal Button */}
+            {/* Orders Portal Button (Desktop) */}
             <button 
-              className="btn btn-sm btn-outline-gold" 
+              className="btn btn-sm btn-outline-gold desktop-only-btn" 
               onClick={onOpenAdmin}
               title="Admin Orders Portal"
               style={{ fontSize: '0.8rem', padding: '0.45rem 0.8rem' }}
@@ -55,12 +87,12 @@ export default function Navbar({ onOpenAdmin }) {
               📋 Orders Portal
             </button>
 
-            {/* Instagram Official Link */}
+            {/* Instagram Official Link (Desktop) */}
             <a 
               href="https://www.instagram.com/royalsultan_rs" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-sm btn-outline-gold" 
+              className="btn btn-sm btn-outline-gold desktop-only-btn" 
               title="Official Instagram @royalsultan_rs"
               style={{ fontSize: '0.8rem', padding: '0.45rem 0.75rem' }}
             >
@@ -68,13 +100,14 @@ export default function Navbar({ onOpenAdmin }) {
             </a>
 
             <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923091065712" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-sm btn-whatsapp" 
+              className="btn btn-sm btn-whatsapp nav-whatsapp-btn" 
               id="nav-whatsapp-btn"
+              title="Chat on WhatsApp 0309 1065712"
             >
-              <span>💬</span> <span>WhatsApp</span>
+              <span>💬</span> <span className="whatsapp-btn-text">WhatsApp</span>
             </a>
 
             {/* Slide-out Cart Toggle Button */}

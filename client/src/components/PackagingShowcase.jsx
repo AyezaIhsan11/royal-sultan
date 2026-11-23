@@ -2,10 +2,38 @@ import React from 'react';
 
 export default function PackagingShowcase() {
   const PACK_SIZES = [
-    { weight: '1 KG', type: 'Royal Black Pouch', color: '#1A1815', target: 'Retail & Gifting', desc: 'Sleek matte black finish with royal gold crown and moisture barrier.' },
-    { weight: '5 KG', type: 'Emerald Green Pouch', color: '#1B3B2B', target: 'Modern Household', desc: 'Rich emerald green packaging preserving pure Himalayan aroma.' },
-    { weight: '10 KG', type: 'Royal Navy Blue Bag', color: '#1A2A44', target: 'Family Selection', desc: 'Equipped with a sturdy gold carrying handle and reinforced base.' },
-    { weight: '25 KG', type: 'Royal Maroon Pouch', color: '#4A1521', target: 'Banquet & Feasts', desc: 'Master royal maroon bag with gold handle for celebratory feasts.' }
+    { 
+      weight: '1 KG', 
+      type: 'Royal Black Pouch', 
+      color: '#1A1815', 
+      target: 'Retail & Gifting', 
+      desc: 'Sleek matte black finish with royal gold crown and moisture barrier.',
+      image: '/assets/images/packaging/bag_1kg.jpg'
+    },
+    { 
+      weight: '5 KG', 
+      type: 'Emerald Green Pouch', 
+      color: '#1B3B2B', 
+      target: 'Modern Household', 
+      desc: 'Rich emerald green packaging preserving pure Himalayan aroma.',
+      image: '/assets/images/packaging/bag_5kg.jpg'
+    },
+    { 
+      weight: '10 KG', 
+      type: 'Royal Navy Blue Bag', 
+      color: '#1A2A44', 
+      target: 'Family Selection', 
+      desc: 'Equipped with a sturdy gold carrying handle and reinforced base.',
+      image: '/assets/images/packaging/bag_10kg.jpg'
+    },
+    { 
+      weight: '25 KG', 
+      type: 'Royal Maroon Pouch', 
+      color: '#4A1521', 
+      target: 'Banquet & Feasts', 
+      desc: 'Master royal maroon bag with gold handle for celebratory feasts.',
+      image: '/assets/images/packaging/bag_25kg.jpg'
+    }
   ];
 
   return (
@@ -23,21 +51,44 @@ export default function PackagingShowcase() {
           <img 
             src="/assets/images/instagram/post_7_Deol1ltkSV8.jpg" 
             alt="Royal Sultan Collection 1KG, 5KG, 10KG, 25KG Packaging" 
-            style={{ width: '100%', maxHeight: '580px', objectFit: 'cover' }}
+            style={{ width: '100%', maxHeight: '540px', objectFit: 'cover' }}
           />
         </div>
 
-        <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+        <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.5rem' }}>
           {PACK_SIZES.map(item => (
-            <div key={item.weight} className="config-card-option" style={{ textAlign: 'center', padding: '1.6rem 1.2rem', borderTop: `4px solid ${item.color}` }}>
+            <div 
+              key={item.weight} 
+              className="config-card-option" 
+              style={{ 
+                textAlign: 'center', 
+                padding: '1.6rem 1.2rem', 
+                borderTop: `4px solid ${item.color}`,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                background: 'var(--bg-surface)',
+                boxShadow: '0 6px 20px rgba(0,0,0,0.05)'
+              }}
+            >
               <span className="option-tag">{item.target}</span>
-              <div className="option-title" style={{ fontSize: '1.6rem', color: 'var(--gold-bright)', margin: '0.5rem 0' }}>
+              
+              {/* Dedicated Individual Bag Picture */}
+              <div style={{ height: '180px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0.8rem 0' }}>
+                <img 
+                  src={item.image} 
+                  alt={`Royal Sultan ${item.weight} ${item.type}`} 
+                  style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.12))' }} 
+                />
+              </div>
+
+              <div className="option-title" style={{ fontSize: '1.55rem', color: 'var(--gold-bright)', margin: '0.3rem 0' }}>
                 {item.weight}
               </div>
-              <div style={{ fontWeight: '700', fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+              <div style={{ fontWeight: '700', fontSize: '0.92rem', marginBottom: '0.4rem', color: 'var(--text-primary)' }}>
                 {item.type}
               </div>
-              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>{item.desc}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.desc}</p>
             </div>
           ))}
         </div>

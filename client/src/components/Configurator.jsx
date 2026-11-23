@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 
+const BAG_IMAGES_BY_WEIGHT = {
+  1: '/assets/images/packaging/bag_1kg.jpg',
+  5: '/assets/images/packaging/bag_5kg.jpg',
+  10: '/assets/images/packaging/bag_10kg.jpg',
+  25: '/assets/images/packaging/bag_25kg.jpg'
+};
+
 export default function Configurator({ products, activeProductCode, setActiveProductCode }) {
   const { addToCart } = useCart();
   const [selectedCode, setSelectedCode] = useState(activeProductCode || 'RS-1121-KNT');
@@ -117,7 +124,15 @@ export default function Configurator({ products, activeProductCode, setActivePro
                     key={tier.weight}
                     className={`config-card-option weight-card ${tier.weight === weightKg ? 'active' : ''}`}
                     onClick={() => setWeightKg(tier.weight)}
+                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                   >
+                    <div style={{ height: '54px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.35rem' }}>
+                      <img 
+                        src={BAG_IMAGES_BY_WEIGHT[tier.weight] || '/assets/images/packaging/bag_1kg.jpg'} 
+                        alt={tier.label}
+                        style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                      />
+                    </div>
                     <div className="weight-val">{tier.label}</div>
                     <div className="weight-sub">{tier.type}</div>
                     <span className={`tier-category-badge ${tier.isB2C ? 'tier-b2c' : 'tier-b2b'}`}>
@@ -168,8 +183,9 @@ export default function Configurator({ products, activeProductCode, setActivePro
 
               <div className="preview-art-frame">
                 <img 
-                  src={currentProduct.image} 
-                  alt={currentProduct.title} 
+                  src={BAG_IMAGES_BY_WEIGHT[currentTier.weight] || currentProduct.image} 
+                  alt={`${currentProduct.title} - ${currentTier.label}`} 
+                  style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
                 />
               </div>
 
@@ -216,7 +232,7 @@ export default function Configurator({ products, activeProductCode, setActivePro
                 🛒 Add To Royal Cart
               </button>
               <a 
-                href={`https://wa.me/923001234567?text=Hello%20Royal%20Sultan,%20I%20would%20like%20to%20order%20${quantity}x%20${encodeURIComponent(currentProduct.title)}%20(${currentTier.label})%20Total:%20PKR%20${totalPrice}`}
+                href={`https://wa.me/923091065712?text=Hello%20Royal%20Sultan,%20I%20would%20like%20to%20order%20${quantity}x%20${encodeURIComponent(currentProduct.title)}%20(${currentTier.label})%20Total:%20PKR%20${totalPrice}`}
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-whatsapp"

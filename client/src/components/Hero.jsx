@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="hero-section" id="home">
       <img 
-        src="/assets/images/hero-banner.jpg" 
-        alt="Royal Sultan 1121 Kainat Basmati Packaging" 
+        src="/assets/images/instagram/post_11_DeWN_-AEZ6T.jpg" 
+        alt="Royal Sultan Premium Basmati Falling Grains" 
         className="hero-background-art" 
       />
       <div className="hero-overlay"></div>
@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="badge-tag">
-            <span>✨</span> "Khushbu Jo Royal Ho" • Pure Punjab 1121
+            <span>👑</span> "Khushbu Jo Royal Ho" • Pure Punjab 1121
           </div>
 
           <h1 className="hero-title">
@@ -36,7 +36,7 @@ export default function Hero() {
               <span style={{ color: 'var(--gold-primary)' }}>✓</span> 100% Halal Certified
             </div>
             <div className="hero-badge-pill">
-              <span style={{ color: 'var(--gold-primary)' }}>✓</span> Product of Pakistan
+              <span style={{ color: 'var(--gold-primary)' }}>✓</span> Product of Pakistan 🇵🇰
             </div>
           </div>
 
@@ -45,8 +45,8 @@ export default function Hero() {
             <a href="#configurator" className="btn btn-gold" id="hero-b2c-cta">
               ⚡ Build Your Custom Bag (B2C)
             </a>
-            <a href="#export-rfq" className="btn btn-outline-gold" id="hero-b2b-cta">
-              🚢 B2B Container & Export RFQ
+            <a href="https://wa.me/923091065712?text=Hello%20Royal%20Sultan,%20I%20am%20interested%20in%20placing%20an%20order." target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" id="hero-whatsapp-cta">
+              <span>💬</span> WhatsApp Order: 0309 1065712
             </a>
           </div>
         </div>

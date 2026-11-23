@@ -143,7 +143,7 @@ export default function CheckoutModal() {
                 name="phone" 
                 className="form-control" 
                 required 
-                placeholder="0300 1234567"
+                placeholder="0309 1065712"
                 value={customer.phone}
                 onChange={handleChange}
               />

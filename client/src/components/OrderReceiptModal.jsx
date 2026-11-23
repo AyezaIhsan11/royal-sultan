@@ -46,7 +46,7 @@ export default function OrderReceiptModal() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginTop: '1.8rem' }}>
           <a 
-            href={`https://wa.me/923001234567?text=Hello%20Royal%20Sultan,%20I%20have%20placed%20order%20(${lastOrder.orderCode})%20for%20PKR%20${lastOrder.totalAmount}.%20Please%20confirm%20dispatch.`}
+            href={`https://wa.me/923091065712?text=Hello%20Royal%20Sultan,%20I%20have%20placed%20order%20(${lastOrder.orderCode})%20for%20PKR%20${lastOrder.totalAmount}.%20Please%20confirm%20dispatch.`}
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-whatsapp"

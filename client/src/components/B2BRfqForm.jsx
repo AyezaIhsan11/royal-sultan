@@ -104,7 +104,7 @@ export default function B2BRfqForm({ prefilledData }) {
           </p>
           <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center' }}>
             <a 
-              href={`https://wa.me/923001234567?text=Hello%20Royal%20Sultan%20Export%20Desk,%20I%20have%20submitted%20B2B%20RFQ%20(${submittedRfq.inquiryCode})%20for%20${submittedRfq.estimatedMetricTons}%20MT%20to%20${encodeURIComponent(submittedRfq.destinationPort)}`}
+              href={`https://wa.me/923091065712?text=Hello%20Royal%20Sultan%20Export%20Desk,%20I%20have%20submitted%20B2B%20RFQ%20(${submittedRfq.inquiryCode})%20for%20${submittedRfq.estimatedMetricTons}%20MT%20to%20${encodeURIComponent(submittedRfq.destinationPort)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp"

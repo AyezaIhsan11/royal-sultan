@@ -17,12 +17,18 @@ export default function Footer({ onOpenAdmin }) {
             <p>
               "Khushbu Jo Royal Ho" — ROYAL SULTAN 👑. Premium Basmati Rice with Taste, Quality, and Royalty. Pakistani Rice adhering to Global Standards.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.8rem', fontSize: '0.86rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', marginTop: '0.9rem', fontSize: '0.86rem' }}>
+              <div>
+                💬 WhatsApp / Call: <a href="https://wa.me/923091065712" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '700' }}>0309 1065712</a>
+              </div>
               <div>
                 📸 Instagram: <a href="https://www.instagram.com/royalsultan_rs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '700' }}>@royalsultan_rs</a>
               </div>
               <div>
-                🌐 Official Web: <a href="https://royalsultan.pk" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '600' }}>royalsultan.pk</a>
+                ✉️ Email: <a href="mailto:info@royalsultan.pk" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '600' }}>info@royalsultan.pk</a>
+              </div>
+              <div>
+                🌐 Web: <a href="https://royalsultan.pk" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '600' }}>royalsultan.pk</a>
               </div>
             </div>
             <div style={{ display: 'flex', gap: '0.6rem', marginTop: '1rem', flexWrap: 'wrap' }}>
