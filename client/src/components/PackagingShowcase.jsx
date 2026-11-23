@@ -2,42 +2,42 @@ import React from 'react';
 
 export default function PackagingShowcase() {
   const PACK_SIZES = [
-    { weight: '1 KG', type: 'Luxury Handle Bag', target: 'Retail / Gift', desc: 'Matte metallic finish with moisture lock barrier.' },
-    { weight: '5 KG', type: 'Resealable Zipper', target: 'Urban Household', desc: 'Aroma-seal zip lock keeping every grain fresh.' },
-    { weight: '10 KG', type: 'Non-Woven Eco Tote', target: 'Family Choice', desc: 'Heavy-duty ergonomic stitched handle bag.' },
-    { weight: '20 KG', type: 'Master Poly Pack', target: 'Banquets & HoReCa', desc: 'Commercial grade reinforced tear-resistant bag.' },
-    { weight: '40 KG', type: 'Export Jute Sack', target: 'Global Container FCL', desc: 'ISO fumigated breathable natural golden jute.' }
+    { weight: '1 KG', type: 'Royal Black Pouch', color: '#1A1815', target: 'Retail & Gifting', desc: 'Sleek matte black finish with royal gold crown and moisture barrier.' },
+    { weight: '5 KG', type: 'Emerald Green Pouch', color: '#1B3B2B', target: 'Modern Household', desc: 'Rich emerald green packaging preserving pure Himalayan aroma.' },
+    { weight: '10 KG', type: 'Royal Navy Blue Bag', color: '#1A2A44', target: 'Family Selection', desc: 'Equipped with a sturdy gold carrying handle and reinforced base.' },
+    { weight: '25 KG', type: 'Royal Maroon Pouch', color: '#4A1521', target: 'Banquet & Feasts', desc: 'Master royal maroon bag with gold handle for celebratory feasts.' }
   ];
 
   return (
     <section className="section-padding" id="packaging" style={{ background: 'var(--bg-surface-elevated)' }}>
       <div className="container">
         <div className="section-header text-center">
-          <div className="sub-slogan">International Food Grade Preservation</div>
+          <div className="sub-slogan">Official Royal Sultan Collection</div>
           <h2>Bespoke Packaging <span className="gold-text">Excellence</span></h2>
           <p>
-            From consumer zipper bags to 40ft container export master sacks, our multi-barrier packaging protects delicate basmati volatile aromas and delivers pristine non-sticky grains.
+            "Khushbu Jo Royal Ho" — Our signature 4-size luxury collection, crafted with moisture-lock barrier layers, ergonomic gold handles, and royal color-coded finishes.
           </p>
         </div>
 
-        <div className="packaging-lineup-banner">
+        <div className="packaging-lineup-banner" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 36px rgba(0,0,0,0.08)', marginBottom: '2.5rem' }}>
           <img 
-            src="/assets/images/packaging-lineup.jpg" 
-            alt="Royal Sultan Full Packaging Lineup" 
+            src="/assets/images/instagram/post_7_Deol1ltkSV8.jpg" 
+            alt="Royal Sultan Collection 1KG, 5KG, 10KG, 25KG Packaging" 
+            style={{ width: '100%', maxHeight: '580px', objectFit: 'cover' }}
           />
         </div>
 
-        <div className="packaging-cards-grid">
+        <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
           {PACK_SIZES.map(item => (
-            <div key={item.weight} className="config-card-option" style={{ textAlign: 'center', padding: '1.5rem 1rem' }}>
+            <div key={item.weight} className="config-card-option" style={{ textAlign: 'center', padding: '1.6rem 1.2rem', borderTop: `4px solid ${item.color}` }}>
               <span className="option-tag">{item.target}</span>
-              <div className="option-title" style={{ fontSize: '1.5rem', color: 'var(--gold-bright)', margin: '0.4rem 0' }}>
+              <div className="option-title" style={{ fontSize: '1.6rem', color: 'var(--gold-bright)', margin: '0.5rem 0' }}>
                 {item.weight}
               </div>
-              <div style={{ fontWeight: '700', fontSize: '0.9rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+              <div style={{ fontWeight: '700', fontSize: '0.95rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
                 {item.type}
               </div>
-              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{item.desc}</p>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>{item.desc}</p>
             </div>
           ))}
         </div>

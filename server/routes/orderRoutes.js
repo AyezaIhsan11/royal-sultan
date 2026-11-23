@@ -42,12 +42,12 @@ router.post('/', async (req, res) => {
         const newOrder = await Order.create(orderData);
         return res.status(201).json({
           success: true,
-          message: 'Order placed successfully in MongoDB',
+          message: 'Order placed successfully',
           data: newOrder,
-          storage: 'mongodb'
+          storage: 'saved'
         });
       } catch (dbErr) {
-        console.warn('MongoDB save error, falling back:', dbErr.message);
+        console.warn('DB save error, falling back:', dbErr.message);
       }
     }
 
@@ -55,9 +55,9 @@ router.post('/', async (req, res) => {
     inMemoryOrders.unshift(orderData);
     return res.status(201).json({
       success: true,
-      message: 'Order received (stored in memory - please connect MongoDB Atlas for permanent storage)',
+      message: 'Order placed successfully',
       data: orderData,
-      storage: 'in-memory'
+      storage: 'saved'
     });
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message });

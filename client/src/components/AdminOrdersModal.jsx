@@ -10,9 +10,18 @@ export default function AdminOrdersModal({ isOpen, onClose }) {
     setErrorMsg('');
     try {
       const res = await fetch('/api/orders');
-      const data = await res.json();
+      const text = await res.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch (parseErr) {
+        console.error('Non-JSON response from /api/orders:', text);
+        throw new Error('Server returned an unexpected format. Please refresh in a moment.');
+      }
       if (data && data.success && Array.isArray(data.data)) {
         setOrders(data.data);
+      } else if (data && data.message) {
+        setErrorMsg(data.message);
       } else {
         setErrorMsg('No orders found.');
       }
@@ -40,7 +49,7 @@ export default function AdminOrdersModal({ isOpen, onClose }) {
               👑 Royal Sultan Orders Management
             </h3>
             <span style={{ fontSize: '0.82rem', color: 'var(--gold-primary)' }}>
-              Live Orders from Database ({orders.length} total)
+              Active Customer Orders ({orders.length} total)
             </span>
           </div>
           <div style={{ display: 'flex', gap: '0.6rem' }}>

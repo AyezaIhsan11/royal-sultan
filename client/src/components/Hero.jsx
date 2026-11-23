@@ -54,15 +54,15 @@ export default function Hero() {
         {/* Visual Hero Showcase Card */}
         <div className="hero-media-card">
           <img 
-            src="/assets/images/hero-banner.jpg" 
-            alt="Royal Sultan 1121 Kainat Basmati Luxury Matte Bag" 
+            src="/assets/images/instagram/post_8_DekJSnPkQnc.jpg" 
+            alt="Royal Sultan 1121 Kainat Basmati Khushbu Jo Royal Ho" 
             className="hero-main-img" 
           />
           <div className="hero-floating-seal">
-            <div className="seal-icon">🏆</div>
+            <div className="seal-icon">👑</div>
             <div className="seal-text">
-              <h4>8.35mm Verified</h4>
-              <p>Himalayan Snowmelt Fed</p>
+              <h4>Khushbu Jo Royal Ho</h4>
+              <p>Pure Punjab 1121 Basmati</p>
             </div>
           </div>
         </div>

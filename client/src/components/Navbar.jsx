@@ -55,6 +55,18 @@ export default function Navbar({ onOpenAdmin }) {
               📋 Orders Portal
             </button>
 
+            {/* Instagram Official Link */}
+            <a 
+              href="https://www.instagram.com/royalsultan_rs" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-sm btn-outline-gold" 
+              title="Official Instagram @royalsultan_rs"
+              style={{ fontSize: '0.8rem', padding: '0.45rem 0.75rem' }}
+            >
+              <span>📸</span> <span>@royalsultan_rs</span>
+            </a>
+
             <a 
               href="https://wa.me/923001234567" 
               target="_blank" 

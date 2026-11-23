@@ -7,13 +7,13 @@ export default function HeritageSection() {
         <div className="about-grid">
           <div className="about-media-stack">
             <img 
-              src="/assets/images/punjab-heritage.jpg" 
-              alt="Punjab Golden Fields and Basmati Harvest" 
+              src="/assets/images/instagram/post_3_De2P1dpkX5-.jpg" 
+              alt="Royal Sultan 1121 Basmati in Authentic Punjab Heritage Setting" 
               className="about-primary-img" 
             />
             <div className="about-stamp-card">
-              <h4>Chenab River Fed</h4>
-              <p>Matured through natural aging for superior fragrance and non-sticky elongation.</p>
+              <h4>Taste • Quality • Royalty</h4>
+              <p>Pakistani Basmati Rice crafted to Global Standards. Naturally aged for superior aroma and elongation.</p>
             </div>
           </div>
 

@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 });
 
 // Only listen when executed directly (not when imported as Vercel serverless function)
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`🌾 Royal Sultan MERN Server running on port http://localhost:${PORT}`);
   });

@@ -15,12 +15,20 @@ export default function Footer({ onOpenAdmin }) {
               </div>
             </a>
             <p>
-              "Khushbu Jo Royal Ho". Premium 1121 Kainat Basmati, aged in natural Punjab river valleys for non-sticky, long-grain perfection. Domestic delivery and worldwide container export.
+              "Khushbu Jo Royal Ho" — ROYAL SULTAN 👑. Premium Basmati Rice with Taste, Quality, and Royalty. Pakistani Rice adhering to Global Standards.
             </p>
-            <div style={{ display: 'flex', gap: '0.8rem', marginTop: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.8rem', fontSize: '0.86rem' }}>
+              <div>
+                📸 Instagram: <a href="https://www.instagram.com/royalsultan_rs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '700' }}>@royalsultan_rs</a>
+              </div>
+              <div>
+                🌐 Official Web: <a href="https://royalsultan.pk" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-primary)', textDecoration: 'none', fontWeight: '600' }}>royalsultan.pk</a>
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: '0.6rem', marginTop: '1rem', flexWrap: 'wrap' }}>
               <span className="badge-tag">ISO 22000</span>
               <span className="badge-tag">Halal Certified</span>
-              <span className="badge-tag">HACCP</span>
+              <span className="badge-tag">Export Quality</span>
             </div>
           </div>
 
@@ -77,7 +85,7 @@ export default function Footer({ onOpenAdmin }) {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            © {new Date().getFullYear()} Royal Sultan Premium Basmati Rice. Built with MERN Stack (MongoDB, Express, React, Node.js). All rights reserved.
+            © {new Date().getFullYear()} Royal Sultan Premium Basmati Rice. All rights reserved.
           </div>
           <div className="footer-cert-badges">
             <span>Product of Pakistan 🇵🇰</span>

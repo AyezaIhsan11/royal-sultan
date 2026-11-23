@@ -162,7 +162,7 @@ export default function Configurator({ products, activeProductCode, setActivePro
           <div className="config-preview-panel">
             <div>
               <div className="preview-badge-status">
-                <span className="badge-tag">MERN Verified SKU</span>
+                <span className="badge-tag">Official Royal Quality</span>
                 <span className="preview-sku">{currentProduct.code}</span>
               </div>
 
