@@ -37,7 +37,7 @@ const FALLBACK_PRODUCTS = [
       { weight: 5, label: '5 KG', type: 'Emerald Green Pouch (Gold Trim)', price: 4300, isB2C: true, popular: true },
       { weight: 10, label: '10 KG', type: 'Royal Navy Blue Bag (Gold Handle)', price: 8400, isB2C: true },
       { weight: 25, label: '25 KG', type: 'Royal Maroon Pouch (Gold Handle)', price: 20500, isB2C: true },
-      { weight: 40, label: '40 KG', type: 'Export Skin Jute Sack', price: 32000, isB2C: false }
+      { weight: 40, label: '40 KG', type: 'Royal Choice Package (Skin Gold)', price: 32000, isB2C: false }
     ]
   },
   {
@@ -59,7 +59,7 @@ const FALLBACK_PRODUCTS = [
       { weight: 5, label: '5 KG', type: 'Emerald Green Pouch (Gold Trim)', price: 3500, isB2C: true, popular: true },
       { weight: 10, label: '10 KG', type: 'Royal Navy Blue Bag (Gold Handle)', price: 6800, isB2C: true },
       { weight: 25, label: '25 KG', type: 'Royal Maroon Pouch (Gold Handle)', price: 16500, isB2C: true },
-      { weight: 40, label: '40 KG', type: 'Export Skin Jute Sack', price: 26000, isB2C: false }
+      { weight: 40, label: '40 KG', type: 'Royal Choice Package (Skin Gold)', price: 26000, isB2C: false }
     ]
   },
   {
@@ -80,7 +80,7 @@ const FALLBACK_PRODUCTS = [
       { weight: 5, label: '5 KG', type: 'Emerald Green Pouch (Gold Trim)', price: 3950, isB2C: true },
       { weight: 10, label: '10 KG', type: 'Royal Navy Blue Bag (Gold Handle)', price: 7700, isB2C: true, popular: true },
       { weight: 25, label: '25 KG', type: 'Royal Maroon Pouch (Gold Handle)', price: 18800, isB2C: true },
-      { weight: 40, label: '40 KG', type: 'Export Skin Jute Sack', price: 29500, isB2C: false }
+      { weight: 40, label: '40 KG', type: 'Royal Choice Package (Skin Gold)', price: 29500, isB2C: false }
     ]
   },
   {
@@ -100,7 +100,7 @@ const FALLBACK_PRODUCTS = [
       { weight: 5, label: '5 KG', type: 'Emerald Green Pouch (Gold Trim)', price: 2100, isB2C: true, popular: true },
       { weight: 10, label: '10 KG', type: 'Royal Navy Blue Bag (Gold Handle)', price: 4000, isB2C: true },
       { weight: 25, label: '25 KG', type: 'Royal Maroon Pouch (Gold Handle)', price: 9800, isB2C: true },
-      { weight: 40, label: '40 KG', type: 'Export Skin Jute Sack', price: 15500, isB2C: false }
+      { weight: 40, label: '40 KG', type: 'Royal Choice Package (Skin Gold)', price: 15500, isB2C: false }
     ]
   }
 ];

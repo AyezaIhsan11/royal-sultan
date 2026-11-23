@@ -7,14 +7,14 @@ export default function HeritageSection() {
         <div className="about-grid" style={{ alignItems: 'center', gap: '2.5rem' }}>
           <div className="about-media-stack" style={{ position: 'relative' }}>
             <img 
-              src="/assets/images/instagram/post_3_De2P1dpkX5-.jpg" 
-              alt="Royal Sultan 1121 Basmati in Authentic Punjab Heritage Setting" 
+              src="/assets/images/heritage_punjab.jpg" 
+              alt="Royal Sultan Basmati Rice Fields - Punjab, Pakistan" 
               className="about-primary-img" 
-              style={{ maxHeight: '280px', width: '100%', objectFit: 'cover', borderRadius: '12px' }}
+              style={{ maxHeight: '340px', width: '100%', objectFit: 'cover', borderRadius: '12px', boxShadow: 'var(--shadow-gold)' }}
             />
             <div className="about-stamp-card" style={{ padding: '0.8rem 1rem' }}>
-              <h4 style={{ fontSize: '0.95rem', margin: 0 }}>Taste • Quality • Royalty</h4>
-              <p style={{ fontSize: '0.78rem', margin: '0.2rem 0 0 0' }}>Naturally aged Himalayan snowmelt-fed harvests.</p>
+              <h4 style={{ fontSize: '0.95rem', margin: 0 }}>Product of Punjab, Pakistan</h4>
+              <p style={{ fontSize: '0.78rem', margin: '0.2rem 0 0 0' }}>Nurtured by fertile river basins & Himalayan snowmelt.</p>
             </div>
           </div>
 

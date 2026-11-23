@@ -36,10 +36,10 @@ export default function PackagingShowcase() {
     },
     { 
       weight: '40 KG', 
-      type: 'Export Skin Jute Sack', 
+      type: 'Royal Choice 40 KG Package', 
       color: '#B49B76', 
-      target: 'Global Shipping / FCL', 
-      desc: 'Natural skin-color jute burlap sack with breathable moisture barrier for bulk export.',
+      target: 'Commercial & Export', 
+      desc: 'Official Royal Sultan 40 KG packaging with royal gold handle, Royal Choice crest, and aroma-lock barrier.',
       image: '/assets/images/packaging/bag_40kg.jpg'
     }
   ];
@@ -51,17 +51,8 @@ export default function PackagingShowcase() {
           <div className="sub-slogan">Official Royal Sultan Collection</div>
           <h2>Bespoke Packaging <span className="gold-text">Excellence</span></h2>
           <p>
-            "Khushbu Jo Royal Ho" — Our complete 1 KG to 40 KG packaging lineup, with distinct colors for each size tier, moisture-lock protection, and export-grade natural skin jute sacks.
+            "Khushbu Jo Royal Ho" — Our complete 1 KG to 40 KG packaging lineup, with distinct colors for each size tier, moisture-lock protection, and export-grade master bags.
           </p>
-        </div>
-
-        {/* Panoramic Horizontal Banner showing all bags in a line */}
-        <div className="packaging-lineup-banner" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 12px 36px rgba(0,0,0,0.08)', marginBottom: '2.5rem', background: '#FAF7F2' }}>
-          <img 
-            src="/assets/images/packaging/packaging_lineup_horizontal.jpg" 
-            alt="Royal Sultan Complete Lineup - 1KG, 5KG, 10KG, 25KG, 40KG" 
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-          />
         </div>
 
         <div className="packaging-cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.2rem' }}>
